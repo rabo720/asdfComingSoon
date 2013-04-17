@@ -11,11 +11,12 @@
 <body>
 	
 	<header class ="row-fluid">
-		<div class="span12 border">
+		<div class="span12 border color">
 			<h1>Header</h1>
 			<br>
 		</div>
 	</header>
+	<br>
 	<article class = "row-fluid">
 		<div class="span8 border">
 			<div class="span8 offset2">
@@ -47,42 +48,60 @@
 	<article class="row-fluid">
 		<div class="span12 border">
 			<br>
-			<div class="span5 offset3 border">
-				<div class="g-plusone" data-size="medium" data-href="https://plus.google.com/u/0/100028417484512511578"></div>
-			<script type="text/javascript">
-			  (function() {
-			    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-			    po.src = 'https://apis.google.com/js/plusone.js';
-			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-			  })();
-			</script>
-
-		    <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://twitter.com/ASDFLearnig" data-text="ASDFLearnig" data-via="ASDFLearnig" data-lang="es">Twittear</a>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-			<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FASDF-learning%2F546487068714998&send=false&layout=button_count&width=450&show_faces=true&font&colorscheme=light&action=like&height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe>
-		 	
-			</div>
-
-		</div>
 		
+			<div class="border circle">
+				<div class="red">
+					<div class="g-plusone" data-size="medium" data-href="https://plus.google.com/u/0/100028417484512511578"></div>
+					<script type="text/javascript">
+					  (function() {
+					    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+					    po.src = 'https://apis.google.com/js/plusone.js';
+					    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+					  })();
+					</script>
+				</div>
+			</div>
+			<div class="sep"></div>
+			<div class="border circle">
+				<div class="red">
+					<a href="https://twitter.com/share" class="twitter-share-button" data-url="https://twitter.com/ASDFLearnig" data-text="ASDFLearnig" data-via="ASDFLearnig" data-lang="es">Twittear</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				</div>
+			</div>
+			<div class="sep"></div>
+			<div class="border circle">
+				<div class="red">
+					<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FASDF-learning%2F546487068714998&send=false&layout=button_count&width=450&show_faces=true&font&colorscheme=light&action=like&height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe>
+				</div>
+			</div>
+		
+			<br>
+		</div>
 	</article>
 	<br>
 	<footer class = "row-fluid">
 		<div class="span12 border">
-			<div class="span8 offset2">
+			<div class="span8 offset2 color">
 				<center>
 					<h2>Progreso.</h2>
 				</center>
-				<div class="progress progress-success progress-striped active">
-				  <div class="bar" style="width: 40%;"></div>
+				<div class="progress progress-info progress-striped active" style = "height: 40px;">
+				  <div class="bar" style="width: 30%;"></div>
 				</div>
 			</div>
 		</div>
 	</footer>
 	<script type="text/javascript"> 
 		newYear = new Date(2013, 5, 28); 
-		$('#count').countdown({until: newYear,layout: '<div class="span12" id="hour"><div class="span6 offset3 label label-inverse"><center><h1 style="color: white">{dn}:{hn}:{mn}:{sn}</h1></center></div></div>',timezone: -5}); 
+		$(".circle .red").hide();
+		$('#count').countdown({until: newYear,layout: '<div class="span12" id="hour"><div class="span6 offset3 label label-inverse"><center><h1 style="color: white">{dn}:{hn}:{mn}:{sn}</h1></center></div></div>',timezone: -5});
+
+		$(".circle").hover(function(){
+			$(this).children(".red").show();
+		},function(){
+			$(this).children(".red").hide();
+		})
+
 	</script>
 </body>
 </html>
