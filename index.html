@@ -92,15 +92,15 @@
 		</div>
 	</footer>
 	<script type="text/javascript"> 
-		newYear = new Date(2013, 5, 28); 
-		$(".circle .red").hide();
+		newYear = new Date(2013, 5, 28);
+		$(".red").hide();
 		$('#count').countdown({until: newYear,layout: '<div class="span12" id="hour"><div class="span6 offset3 label label-inverse"><center><h1 style="color: white">{dn}:{hn}:{mn}:{sn}</h1></center></div></div>',timezone: -5});
 
 		$(".circle").hover(function(){
 			$(this).children(".red").show();
 		},function(){
 			$(this).children(".red").hide();
-		})
+		});
 
 	</script>
 </body>
