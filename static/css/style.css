@@ -1,7 +1,19 @@
 .border{
-
+	
 }
 
+.border-top{
+	border-top: .2em solid rgb(150,150,150);
+}
+.border-left{
+	border-left: .2em solid white;
+}
+.border-right{
+	border-right: .2em solid rgb(190,190,190);
+}
+.border-bottom{
+	border-bottom: .2em solid white;
+}
 .color{
 	color: white;
 }
@@ -9,34 +21,68 @@
 .count1{
 	background: rgb(29,30,25);
 	border-radius: 5px;
-	border: 4px dotted rgb(150,150,150);
+	
 }
 header{
-	background: rgb(255,48,25); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(255,48,25,1) 0%, rgba(207,4,4,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,48,25,1)), color-stop(100%,rgba(207,4,4,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(255,48,25,1) 0%,rgba(207,4,4,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(255,48,25,1) 0%,rgba(207,4,4,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(255,48,25,1) 0%,rgba(207,4,4,1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(255,48,25,1) 0%,rgba(207,4,4,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 ); /* IE6-9 */
+	background: rgb(0,183,234); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(0,183,234,1) 0%, rgba(0,158,195,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,183,234,1)), color-stop(100%,rgba(0,158,195,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(0,183,234,1) 0%,rgba(0,158,195,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(0,183,234,1) 0%,rgba(0,158,195,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(0,183,234,1) 0%,rgba(0,158,195,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(0,183,234,1) 0%,rgba(0,158,195,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#009ec3',GradientType=0 );
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	top: 0;
 }
 
 footer{
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	left: 0;
-	background: rgb(29,30,25);
+	background: rgb(0,183,234); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(0,183,234,1) 0%, rgba(0,158,195,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,183,234,1)), color-stop(100%,rgba(0,158,195,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(0,183,234,1) 0%,rgba(0,158,195,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(0,183,234,1) 0%,rgba(0,158,195,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(0,183,234,1) 0%,rgba(0,158,195,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(0,183,234,1) 0%,rgba(0,158,195,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#009ec3',GradientType=0 );
 }
 
-.circle{
-	width: 100px;
-	height: 100px;
+
+.circle-1{	
+	left: 37%;
+}
+
+.circle-2{
+	left: 47%;
+}
+
+.circle-3{
+	left: 57%;
+}
+[class*="circle-"]{
+	width: 120px;
+	height: 120px;
 	display: inline-block;
 	border-radius: 50%;
 	border: 4px dotted;
 	background: rgb(29,30,25); /* Old browsers */
 	border-color:rgb(150,150,150);
+	top: 85%;
+	position: absolute;
+	z-index: 4;
+}
+
+[class*="circle-"]:hover{
+	-webkit-box-shadow: 6px 3px 23px rgba(63, 65, 60, 0.85);
+	-moz-box-shadow:    6px 3px 23px rgba(63, 65, 60, 0.85);
+	box-shadow:         6px 3px 23px rgba(63, 65, 60, 0.85);
+	border: 4px solid;
+	cursor:hand;
 
 }
 
@@ -58,3 +104,68 @@ footer{
 	left:0px;
 	color: white;
 }
+
+.bar-sublime{
+	background-color: rgb(29,30,25);
+}
+
+.video{
+	width:96%;
+	height:30%;
+	padding-right: 4%;
+}
+
+.text{
+	margin-top:0px; 
+}
+
+.icon-img{
+	padding: 2%;
+	width: 10%;
+	height: 10%;
+}
+
+@media (max-width: 1200px) {
+	.circle-1{	
+		left: 32%;
+	}
+
+	.circle-2{
+		left: 47%;
+	}
+
+	.circle-3{
+		left: 62%;
+	}
+}
+
+@media(max-width: 979px) {
+	.circle-1{	
+		left: 12%;
+	}
+
+	.circle-2{
+		left: 42%;
+	}
+
+	.circle-3{
+		left: 72%;
+	}
+}
+
+@media (max-width: 767px) { 
+	.circle-1{	
+		left: 35%;
+		top: 
+	}
+
+	.circle-2{
+		left: 35%;
+	}
+
+	.circle-3{
+		left: 35%;
+	}
+}
+
+
