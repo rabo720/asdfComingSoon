@@ -2,6 +2,12 @@
 	
 }
 
+#body {
+	/*background: rgb(29,30,25);*/
+	/*background: rgb(29,30,25);*/
+	background: white;
+}
+
 .border-top{
 	border-top: .2em solid rgb(150,150,150);
 }
@@ -19,9 +25,8 @@
 }
 
 .count1{
-	background: rgb(29,30,25);
-	border-radius: 5px;
-	
+	/*background: rgb(29,30,25);
+	border-radius: 5px;*/
 }
 header{
 	background: rgb(0,183,234); /* Old browsers */
@@ -65,14 +70,14 @@ footer{
 	left: 57%;
 }
 [class*="circle-"]{
-	width: 120px;
-	height: 120px;
+	width: 90px;
+	height: 90px;
 	display: inline-block;
 	border-radius: 50%;
 	border: 4px dotted;
 	background: rgb(29,30,25); /* Old browsers */
-	border-color:rgb(150,150,150);
-	top: 85%;
+	border-color: rgb(255,255,255);
+	top: 80%;
 	position: absolute;
 	z-index: 4;
 }
@@ -86,10 +91,15 @@ footer{
 
 }
 
+.clock {
+	margin-top: 5em;
+}
+
 .red{
+	text-align: center;
 	position: relative;
-	top: 50px;
-	left: 10px;
+	top: 35px;
+	left: 2px;
 }
 
 .sep{
@@ -100,8 +110,8 @@ footer{
 
 .inc{
 	position: relative;
-	top: 30px;
-	left:0px;
+	top: 27px;
+	left: 0px;
 	color: white;
 }
 
@@ -110,9 +120,9 @@ footer{
 }
 
 .video{
-	width:96%;
-	height:30%;
-	padding-right: 4%;
+	margin-top: 2.5em;
+	height:60%;
+	width:80%;
 }
 
 .text{
@@ -123,6 +133,28 @@ footer{
 	padding: 2%;
 	width: 10%;
 	height: 10%;
+}
+
+.facebook {
+	background-color: rgb(59, 89, 152);
+}
+
+.twitter {
+	background-color: rgb(67, 151, 255);
+}
+
+.gplus {
+	background-color: rgb(207, 69, 43);
+}
+
+.white-header {
+	font-size: 5em;
+	color: white;
+}
+
+.g-plusone {
+	position: relative;
+	left: 10px;
 }
 
 @media (max-width: 1200px) {

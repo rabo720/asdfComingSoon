@@ -4,101 +4,58 @@
 	<title>ASDF-Learnig</title>
 	<link rel="stylesheet" type="text/css" href="static/library/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="static/css/county.css">
 	<link rel="stylesheet" type="text/css" href="static/css/font-awesome.css">
 	<script type="text/javascript" src="static/library/bootstrap/js/bootstrap.min.js"></script>
 	<script>window.jQuery || document.write('<script src="static/library/bootstrap/js/jquery-1.7.2.min.js"><\/script>')</script>
-	<script type="text/javascript" src="static/js/jquery.countdown.js"></script>
+	<script type="text/javascript" src="static/js/county.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#my-count-down").county({
+				endDateTime : new Date('2013/06/28'),
+				reflection  : false,
+				animation   : 'scroll',
+				theme       : 'white'
+			});
+		});
+	</script>
+
 </head>
-<body>
-	
-	<header class ="row-fluid">
-		<div class="icon-img">
-			<img style ="width:8%;padding:0.5%;" src="static/img/icon.png">
-		</div>
-	</header>
-	
-	<article class = "row-fluid">
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<div class="span8 offset2 well">
-			<div class="row-fluid">
-				<div class="span6 border-right">
-					<iframe class="video" src="http://player.vimeo.com/video/43357070" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-				</div>
-				<div class="span6">
-					<br>
-					<center><h1>Tiempo Restante.</h1></center>
-					<br>
-					<div class="row-fluid" id = "count"></div>
-				</div>
+<body id="body">
+	<div class="clock">
+		<center>
+			<div id="my-count-down">
 			</div>
-		</div>
-	</article>
-	<article class ="row-fluid">
-		<div class="span12">
-			<br>
-			<br>
-			<br>
-			<center>
-				<h1>Progreso.</h1>
-				<br>
-			</center>
-		</div>
-		<div class="span8 offset2">
-			<center>
-			<div class="span10 offset1">
-				<div class="progress progress-striped active" style = "height: 40px;">
-				  <div class="bar bar-sublime" style="width: 30%;"></div>
-				</div>
-			</div>
+		</center>
+	</div>
 
-			<div class="span1">
-				<center><h2 class="text">30%</h2></center>
-			</div>
-			</center>	  
+	<div class = "row-fluid video">
+		<div class="offset5 span6">
+			<iframe class="video" src="http://player.vimeo.com/video/43357070" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 		</div>
-	</article>
-
-	<footer class = "row-fluid">
-		<div class="span12 border">
-			<div class="span8 offset2 color">
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-			</div>
-		</div>
-	</footer>
+	</div>
 
 	<article class="row-fluid redes-social">
 		<div class="span12 border">
 			<center>
-			<div class="border circle-1">
-				<div class="inc icon-twitter icon-4x"></div>
+			<div class="circle-1 twitter">
+				<div class="inc icon-twitter icon-3x"></div>
 				<div class="red">
 					<a href="https://twitter.com/share" class="twitter-share-button" data-url="https://twitter.com/ASDFLearnig" data-text="ASDFLearnig" data-via="ASDFLearnig" data-lang="es">Twittear</a>
 					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 				</div>
 			</div>
 			<div class="sep"></div>
-			<div class="border circle-2">
-				<div class="inc icon-facebook icon-4x"></div>
+			<div class="circle-2 facebook">
+				<div class="inc icon-facebook icon-3x"></div>
 				<div class="red">
 					<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FASDF-learning%2F546487068714998&send=false&layout=button_count&width=450&show_faces=true&font&colorscheme=light&action=like&height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe>
 				</div>
 			</div>
 			<div class="sep"></div>
-			<div class="border circle-3">
-				<div class="inc icon-google-plus icon-4x"></div>
+			<div class="circle-3 gplus">
+				<div class="inc icon-google-plus icon-3x"></div>
 				<div class="red">
 					<div class="g-plusone" data-size="medium" data-href="https://plus.google.com/u/0/100028417484512511578"></div>
 					<script type="text/javascript">
@@ -112,9 +69,18 @@
 			</div>
 			</center>
 		</div>
+	</article>
+
+	<script type="text/javascript"> 
+		newYear = new Date(2013, 5, 28);
+		$(".red").hide(); 
+		$("[class*='circle-']").hover(function(){
+			$(this).children(".red").show();
+			$(this).children(".inc").hide();
+		},function(){
+			$(this).children(".red").hide();
+			$(this).children(".inc").show();
+		});
+	</script>
+</body>
 </html>
-
-
-
-
-
